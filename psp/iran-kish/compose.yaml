@@ -1,0 +1,18 @@
+services:
+  iran-kish:
+    build:
+      context: ../..
+      dockerfile: psp/iran-kish/Dockerfile
+    image: iranian-pos-iran-kish:30.1
+    container_name: iranian-pos-iran-kish
+    restart: unless-stopped
+    init: true
+    network_mode: host
+    environment:
+      PCPOS_PORT: "${PCPOS_PORT:-9500}"
+      DISPLAY: ":99"
+    volumes:
+      - iran-kish-wine:/wine
+
+volumes:
+  iran-kish-wine:

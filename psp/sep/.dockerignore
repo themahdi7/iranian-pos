@@ -1,0 +1,7 @@
+vendor/*.pdb
+vendor/*.xml
+vendor/*.log
+vendor/*.bat
+vendor/*.pdf
+**/.git
+**/__pycache__

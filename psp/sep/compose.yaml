@@ -1,0 +1,22 @@
+services:
+  sep:
+    build:
+      context: ../..
+      dockerfile: psp/sep/Dockerfile
+    image: iranian-pos-sep:1.2.1
+    container_name: iranian-pos-sep
+    restart: unless-stopped
+    init: true
+    # Terminal is on the LAN. Bridge NAT often blocks POS TCP 1197.
+    network_mode: host
+    environment:
+      SSP_SIGNALR_PORT: "${SIGNALR_PORT:-8080}"
+      SSP_API_PORT: "${API_PORT:-8090}"
+      SSP_POS_IP: "${POS_IP:-192.168.1.100}"
+      SSP_HOST_URL: "${HOST_URL:-http://127.0.0.1:8080}"
+      DISPLAY: ":99"
+    volumes:
+      - sep-wine:/wine
+
+volumes:
+  sep-wine:

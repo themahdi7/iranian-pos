@@ -1,0 +1,16 @@
+iranian-pos
+===========
+
+This repository contains Linux/Wine/Docker glue to run official Iranian
+PC-POS Windows services on Linux.
+
+It does NOT include, and you must NOT commit:
+
+- PSP Windows installers, .exe, .dll, .pdb
+- PSP PDFs, Word docs, or other vendor manuals
+- Terminal IDs, merchant IDs, hashed terminal fields, or live credentials
+
+Those files belong to the payment service providers (SEP / Saman, Iran Kish,
+and others). Obtain them under your own contract and keep them private.
+
+The MIT license covers only the files authored in this repository.

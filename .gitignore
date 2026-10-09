@@ -1,0 +1,26 @@
+# Vendor SDKs — never publish these
+psp/*/vendor/**
+!psp/*/vendor/README.md
+!psp/*/vendor/.gitkeep
+
+# Secrets / local overrides
+.env
+.env.local
+docker-compose.override.yml
+compose.override.yml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / Wine prefixes
+*.log
+.wine*/
+*.tar.gz
